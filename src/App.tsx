@@ -18,17 +18,6 @@ import {
 
 const DEFAULT_ROOT_NOTE_ID = "typescript";
 
-const getRootNoteID = () => {
-  let noteID = "";
-
-  const parts = window.location.pathname.split("/");
-  if (parts.length === 2) {
-    noteID = parts[1];
-  }
-
-  return noteID.trim() || DEFAULT_ROOT_NOTE_ID;
-};
-
 type Node = {
   i: number;
   noteID: string;
@@ -44,15 +33,26 @@ export default function App() {
     });
   }, []);
 
-  const [nodes, setNodes] = useState<Node[]>([]);
+  const [nodes, setNodes] = useState<Node[]>(() => {
+    const parts = window.location.pathname.split("/");
+
+    if (parts.length !== 2) {
+      return [{ i: 0, noteID: DEFAULT_ROOT_NOTE_ID }];
+    }
+
+    const searchParams = new URLSearchParams(window.location.search);
+    const ids = searchParams.get("ids")?.split(",") || [];
+
+    return [parts[1], ...ids]
+      .map((s) => s.trim())
+      .filter((s) => !!s)
+      .map((noteID, i) => {
+        return { i, noteID };
+      });
+  });
 
   const addNode = useCallback(
-    (noteID: string, parentNode?: Node) => {
-      if (!parentNode) {
-        setNodes([{ i: 0, noteID }]);
-        return;
-      }
-
+    (noteID: string, parentNode: Node) => {
       const node = nodes.find((n) => n.noteID === noteID);
       if (node) {
         scrollToPane(node.i);
@@ -71,13 +71,21 @@ export default function App() {
     scrollToPane(nodes.length - 1);
   }, [nodes, scrollToPane]);
 
-  useEffect(
-    () => {
-      addNode(getRootNoteID());
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    []
-  );
+  useEffect(() => {
+    if (!nodes.length) return;
+
+    const [rootNode, ...otherNodes] = nodes;
+
+    let url = `/${rootNode.noteID}`;
+    if (otherNodes.length) {
+      const ids = otherNodes.map((n) => n.noteID).join(",");
+      const query = new URLSearchParams({ ids });
+
+      url += `?${query.toString()}`;
+    }
+
+    window.history.replaceState(null, "", url);
+  }, [nodes]);
 
   const [layoutState, setLayoutState] = useState<PanesLayoutState>({
     scrollX: 0,
