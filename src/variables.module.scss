@@ -1,0 +1,26 @@
+$fontSize: 16px;
+$lineHeight: $fontSize * 1.5;
+
+$spaceXS: 8px;
+$spaceS: 24px;
+$spaceM: 48px;
+
+$colorPrimary: #0047ff;
+$colorWhite: #fff;
+$colorBlack: #222;
+$colorText: #444;
+$colorGray: #ddd;
+$colorLightGray: #f5f5f5;
+
+$radiusS: 4px;
+$radiusM: 8px;
+
+$transitionDuration: 200ms;
+
+$paneFullWidth: 560px;
+$paneStickyWidth: $spaceM;
+
+:export {
+  paneFullWidth: $paneFullWidth;
+  paneStickyWidth: $paneStickyWidth;
+}

@@ -1,0 +1,16 @@
+{
+	"id": "javascript",
+	"path": "notes/javascript.md",
+	"title": "JavaScript",
+	"html": "\u003ch1\u003eJavaScript\u003c/h1\u003e\n\u003cp\u003eJavaScript is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as \u003ca href=\"node-js\"\u003eNode.js\u003c/a\u003e, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.\u003c/p\u003e\n",
+	"front_matter": {},
+	"backlink_note_ids": [
+		"node-js",
+		"babel",
+		"assemblyscript",
+		"now"
+	],
+	"linked_note_ids": [
+		"node-js"
+	]
+}

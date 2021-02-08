@@ -1,0 +1,14 @@
+.app {
+  overflow: hidden;
+}
+
+.panesContainer {
+  height: 100vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.panes {
+  display: flex;
+  height: 100%;
+}

@@ -1,0 +1,14 @@
+{
+	"id": "wasmtime",
+	"path": "notes/wasmtime.md",
+	"title": "Wasmtime",
+	"html": "\u003ch1\u003eWasmtime\u003c/h1\u003e\n\u003cp\u003eWasmtime is a Bytecode Alliance project that is a standalone wasm-only optimizing runtime for \u003ca href=\"webassembly\"\u003eWebAssembly\u003c/a\u003e and \u003ca href=\"wasi\"\u003eWASI\u003c/a\u003e. It runs WebAssembly code outside of the Web, and can be used both as a command-line utility or as a library embedded in a larger application.\u003c/p\u003e\n",
+	"front_matter": {},
+	"backlink_note_ids": [
+		"webassembly"
+	],
+	"linked_note_ids": [
+		"webassembly",
+		"wasi"
+	]
+}

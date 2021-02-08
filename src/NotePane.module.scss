@@ -1,0 +1,68 @@
+@import "./variables.module.scss";
+
+.backlinkNotes {
+  margin-top: $spaceM;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 160px;
+  grid-gap: $spaceS;
+  overflow: hidden;
+}
+
+.backlinkNote {
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  border-radius: $radiusM;
+  background: $colorLightGray;
+}
+
+.backlinkNoteContent {
+  padding: $spaceXS;
+  transition: opacity $transitionDuration ease-in;
+  opacity: 0.5;
+
+  &::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 70%, $colorLightGray);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  * {
+    font-size: 0.8rem;
+    margin-top: 0;
+  }
+
+  h1:first-child {
+    color: $colorBlack;
+    font-weight: 500;
+  }
+
+  blockquote,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  ol,
+  p,
+  pre,
+  table,
+  img,
+  video {
+    margin-bottom: 0.4rem;
+  }
+
+  a {
+    color: inherit;
+    pointer-events: none;
+  }
+}

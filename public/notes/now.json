@@ -1,0 +1,11 @@
+{
+	"id": "now",
+	"path": "notes/now.md",
+	"title": "Now",
+	"html": "\u003ch1\u003eNow\u003c/h1\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"javascript\"\u003eJavaScript\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n",
+	"front_matter": {},
+	"backlink_note_ids": [],
+	"linked_note_ids": [
+		"javascript"
+	]
+}

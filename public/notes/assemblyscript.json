@@ -1,0 +1,15 @@
+{
+	"id": "assemblyscript",
+	"path": "notes/assemblyscript.md",
+	"title": "AssemblyScript",
+	"html": "\u003ch1\u003eAssemblyScript\u003c/h1\u003e\n\u003cp\u003eUnlike \u003ca href=\"typescript\"\u003eTypeScript\u003c/a\u003e, which targets a \u003ca href=\"javascript\"\u003eJavaScript\u003c/a\u003e environment with all of its dynamic features, AssemblyScript targets \u003ca href=\"webassembly\"\u003eWebAssembly\u003c/a\u003e with all of its static guarantees, hence intentionally avoids the dynamicness of \u003ca href=\"javascript\"\u003eJavaScript\u003c/a\u003e where it cannot be compiled ahead of time efficiently.\u003c/p\u003e\n",
+	"front_matter": {},
+	"backlink_note_ids": [
+		"webassembly"
+	],
+	"linked_note_ids": [
+		"typescript",
+		"javascript",
+		"webassembly"
+	]
+}

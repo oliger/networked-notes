@@ -1,0 +1,13 @@
+{
+	"id": "node-js",
+	"path": "notes/node-js.md",
+	"title": "Node.JS",
+	"html": "\u003ch1\u003eNode.JS\u003c/h1\u003e\n\u003cp\u003eNode.js is an open-source, cross-platform, back-end \u003ca href=\"javascript\"\u003eJavaScript\u003c/a\u003e runtime environment that runs on the Chrome V8 engine and executes JavaScript code outside a web browser.\u003c/p\u003e\n",
+	"front_matter": {},
+	"backlink_note_ids": [
+		"javascript"
+	],
+	"linked_note_ids": [
+		"javascript"
+	]
+}

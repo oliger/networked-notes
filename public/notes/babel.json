@@ -1,0 +1,11 @@
+{
+	"id": "babel",
+	"path": "notes/babel.md",
+	"title": "Babel",
+	"html": "\u003ch1\u003eBabel\u003c/h1\u003e\n\u003cp\u003eBabel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of \u003ca href=\"javascript\"\u003eJavaScript\u003c/a\u003e in current and older browsers or environments.\u003c/p\u003e\n",
+	"front_matter": {},
+	"backlink_note_ids": [],
+	"linked_note_ids": [
+		"javascript"
+	]
+}

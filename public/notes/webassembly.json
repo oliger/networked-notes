@@ -1,0 +1,15 @@
+{
+	"id": "webassembly",
+	"path": "notes/webassembly.md",
+	"title": "WebAssembly",
+	"html": "\u003ch1\u003eWebAssembly\u003c/h1\u003e\n\u003cp\u003eWebAssembly is a binary instruction format for a stack-based virtual machine. Wasm is designed as a portable compilation target for programming languages, enabling deployment on the web for client and server applications.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"assemblyscript\"\u003eAssemblyScript\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"wasmtime\"\u003eWasmtime\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n",
+	"front_matter": {},
+	"backlink_note_ids": [
+		"assemblyscript",
+		"wasmtime"
+	],
+	"linked_note_ids": [
+		"assemblyscript",
+		"wasmtime"
+	]
+}

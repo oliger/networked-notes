@@ -1,0 +1,13 @@
+{
+	"id": "wasi",
+	"path": "notes/wasi.md",
+	"title": "WASI",
+	"html": "\u003ch1\u003eWASI\u003c/h1\u003e\n\u003cp\u003eWASI is a modular system interface for \u003ca href=\"webassembly\"\u003eWebAssembly\u003c/a\u003e. As described in the initial announcement, it’s focused on security and portability.\u003c/p\u003e\n",
+	"front_matter": {},
+	"backlink_note_ids": [
+		"wasmtime"
+	],
+	"linked_note_ids": [
+		"webassembly"
+	]
+}
