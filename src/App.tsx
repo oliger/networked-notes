@@ -35,15 +35,16 @@ export default function App() {
 
   const [nodes, setNodes] = useState<Node[]>(() => {
     const parts = window.location.pathname.split("/");
+    const rootNodeId = parts[1];
 
-    if (parts.length !== 2) {
+    if (!rootNodeId || parts.length !== 2) {
       return [{ i: 0, noteID: DEFAULT_ROOT_NOTE_ID }];
     }
 
     const searchParams = new URLSearchParams(window.location.search);
     const ids = searchParams.get("ids")?.split(",") || [];
 
-    return [parts[1], ...ids]
+    return [rootNodeId, ...ids]
       .map((s) => s.trim())
       .filter((s) => !!s)
       .map((noteID, i) => {
@@ -72,9 +73,9 @@ export default function App() {
   }, [nodes, scrollToPane]);
 
   useEffect(() => {
-    if (!nodes.length) return;
-
     const [rootNode, ...otherNodes] = nodes;
+
+    if (!rootNode) return;
 
     let url = `/${rootNode.noteID}`;
     if (otherNodes.length) {

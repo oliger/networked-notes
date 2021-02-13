@@ -1,8 +1,8 @@
 import React from "react";
 import cssVariables from "./variables.module.scss";
 
-const PANE_STICKY_WIDTH = parseInt(cssVariables.paneStickyWidth, 10);
-const PANE_FULL_WIDTH = parseInt(cssVariables.paneFullWidth, 10);
+const PANE_STICKY_WIDTH = parseInt(cssVariables.paneStickyWidth as string, 10);
+const PANE_FULL_WIDTH = parseInt(cssVariables.paneFullWidth as string, 10);
 const PANE_WIDTH = PANE_FULL_WIDTH - PANE_STICKY_WIDTH;
 
 const STICKY_PANES_LEFT_COUNT = 3;
